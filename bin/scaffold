@@ -70,7 +70,7 @@ if options[:template] == 'puppet'
     dir = Puppet[:confdir]
   end
 else
-  dir = Puppet[:modulepath].split(':')
+  dir = Puppet[:modulepath].split(':')[0]
 end
 
 # Add generator name to ARGV
